@@ -1,0 +1,81 @@
+{
+  "omnisharp.path": "/usr/local/bin/omnisharp-roslyn/OmniSharp",
+  "omnisharp.useGlobalMono": "never",
+
+  "tailwindCSS.enable": true,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact"
+  },
+
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": ["cs"],
+      "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
+    },
+    "tailwindcss": {
+      "command": "tailwindcss-language-server",
+      "args": ["--stdio"],
+      "filetypes": [
+        "html",
+        "css",
+        "postcss",
+        "scss",
+        "sass",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+      "rootPatterns": [
+        "tailwind.config.js",
+        "tailwind.config.ts",
+        "postcss.config.js",
+        "package.json",
+        ".git"
+      ],
+      "initializationOptions": {
+        "userLanguages": {
+          "javascript": "javascript",
+          "javascriptreact": "javascriptreact",
+          "typescript": "typescript",
+          "typescriptreact": "typescriptreact"
+        }
+      }
+    },
+    "tsserver": {
+      "command": "typescript-language-server",
+      "args": ["--stdio"],
+      "filetypes": [
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact"
+      ],
+      "rootPatterns": [".git"],
+      "initializationOptions": {
+        "hostInfo": "neovim"
+      }
+    },
+    "xml": {
+      "command": "xmlls",
+      "filetypes": ["xml", "xsd", "xsl", "xslt", "svg", "plist"],
+      "settings": {}
+    }
+  },
+
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.triggerExpansionOnTab": true,
+
+  "snippets.ultisnips.pythonPrompt": false
+}
